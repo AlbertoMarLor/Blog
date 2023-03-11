@@ -1,0 +1,18 @@
+<div class="posts">
+    <div class="filtro">
+        <button class="btn btn-info me-3 mb-3 mt-3">General</button>
+        <button class="btn btn-info me-3 mb-3 mt-3">Actulidad</button>
+        <button class="btn btn-info me-3 mb-3 mt-3">Viajes</button>
+        <button class="btn btn-info me-3 mb-3 mt-3">Curiosidades</button>
+    </div>
+    <div class="post" *ngFor="let post of posts">
+
+        <h3>{{post.titulo}}</h3>
+        <h4>{{post.autor}}</h4>
+        <img [src]="post.imagen">
+        <p>{{post.fecha}}</p>
+        <p>{{post.categoria}}</p>
+        <p>{{post.texto}}</p>
+
+    </div>
+</div>
