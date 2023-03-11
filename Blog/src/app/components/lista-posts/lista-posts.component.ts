@@ -23,6 +23,12 @@ export class ListaPostsComponent {
 
 
   }
-
+  onChange($event: any) {
+    if ($event.target.value === "") {
+      this.posts = this.postsServices.getAll()
+    } else {
+      this.posts = this.postsServices.getByCategoria($event.target.value)
+    }
+  }
 
 }

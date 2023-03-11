@@ -6,7 +6,7 @@ import { Post } from '../interfaces/post.interface';
 })
 export class PostsService {
 
-  posts: Post[]
+  private posts: Post[]
 
 
   constructor() {
@@ -28,22 +28,36 @@ export class PostsService {
         fecha: '11/03/2023',
         categoria: 'curiosidades'
       },
+      {
+        titulo: 'El santuario Itsukushima de Miyajima',
+        texto: 'Con su enorme torii rojo situado en el mar, el santuario Itsukushima en la isla de Miyajima atrae a muchos turistas año tras año, pero es que ¿quién puede cansarse de esta vista? Merece la pena pasar el día en Miyajima, tanto para ver cómo cambia la zona según la marea como para disfrutar de una preciosa puesta de sol desde aquí. De hecho, es uno de los tres paisajes más bellos de Japón (Nihon Sankei, en japonés)… ¡y no nos extraña!',
+        autor: 'Takeshi',
+        imagen: 'https://live.staticflickr.com/4883/46701793171_fa4555678d_b.jpg',
+        fecha: '11/03/2023',
+        categoria: 'viajes'
+      },
+
 
     ]
 
   }
-  /* 
-    create(Post) {
-  
-    }
-   */
+
+
   getAll() {
     return this.posts
   }
 
-  /*  getByCategoria(cat) {
- 
- 
-   } */
+
+  create(Post: Post) {
+    this.posts.push(Post)
+  }
+
+
+
+  getByCategoria(cat: string) {
+
+    return this.posts.filter(post => post.categoria === cat)
+  }
 
 }
+

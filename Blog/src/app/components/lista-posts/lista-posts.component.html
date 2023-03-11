@@ -1,9 +1,12 @@
 <div class="posts">
     <div class="filtro">
-        <button class="btn btn-info me-3 mb-3 mt-3">General</button>
-        <button class="btn btn-info me-3 mb-3 mt-3">Actulidad</button>
-        <button class="btn btn-info me-3 mb-3 mt-3">Viajes</button>
-        <button class="btn btn-info me-3 mb-3 mt-3">Curiosidades</button>
+        <select (change)="onChange($event)">
+            <option value="">Selecciona una categoria</option>
+            <option value="general">General</option>
+            <option value="actualidad">Actualidad</option>
+            <option value="viajes">Viajes</option>
+            <option value="curiosidades">Curiosidades</option>
+        </select>
     </div>
     <div class="post" *ngFor="let post of posts">
 
