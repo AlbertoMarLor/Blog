@@ -1,21 +1,22 @@
-<div class="posts">
-    <div class="filtro">
-        <select (change)="onChange($event)">
-            <option value="">Selecciona una categoria</option>
-            <option value="general">General</option>
-            <option value="actualidad">Actualidad</option>
-            <option value="viajes">Viajes</option>
-            <option value="curiosidades">Curiosidades</option>
-        </select>
-    </div>
-    <div class="post" *ngFor="let post of posts">
+<div class="filtro">
+    <select (change)="onChange($event)" class="form-control mt-3">
+        <option value="">Selecciona una categoria</option>
+        <option value="general">General</option>
+        <option value="actualidad">Actualidad</option>
+        <option value="viajes">Viajes</option>
+        <option value="curiosidades">Curiosidades</option>
+    </select>
+</div>
+<div class="posts row">
+    <div class="post col-md-6 offset-md-3" *ngFor="let post of posts">
 
         <h3>{{post.titulo}}</h3>
-        <h4>{{post.autor}}</h4>
         <img [src]="post.imagen">
-        <p>{{post.fecha}}</p>
-        <p>{{post.categoria}}</p>
+        <p class="text-success">{{(post.categoria.toUpperCase())}}</p>
         <p>{{post.texto}}</p>
+        <p></p>
+        <p class="text-muted">{{post.autor}} - {{post.fecha}}</p>
+
 
     </div>
 </div>
