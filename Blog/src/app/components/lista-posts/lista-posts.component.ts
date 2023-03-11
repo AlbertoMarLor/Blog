@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Post } from 'src/app/interfaces/post.interface';
+import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
   selector: 'app-lista-posts',
@@ -6,5 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./lista-posts.component.css']
 })
 export class ListaPostsComponent {
+
+  posts: Post[]
+
+
+  constructor(private postsServices: PostsService) {
+
+    this.posts = []
+
+  }
+
+  getAll() {
+    this.posts = this.postsServices.getAll()
+  }
+
 
 }
