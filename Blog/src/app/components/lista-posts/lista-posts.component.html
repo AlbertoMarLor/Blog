@@ -1,1 +1,18 @@
-<p>lista-posts works!</p>
+<div class="posts">
+    <div class="filtro">
+        <button>General</button>
+        <button>Actulidad</button>
+        <button>Viajes</button>
+        <button>Curiosidades</button>
+    </div>
+    <div class="post" *ngFor="let post of posts">
+
+        <h3>{{post.titulo}}</h3>
+        <h4>{{post.autor}}</h4>
+        <img [src]="post.imagen">
+        <p>{{post.fecha}}</p>
+        <p>{{post.categoria}}</p>
+        <p>{{post.texto}}</p>
+
+    </div>
+</div>
