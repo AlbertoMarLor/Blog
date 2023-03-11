@@ -18,8 +18,10 @@ export class ListaPostsComponent {
 
   }
 
-  getAll() {
+  ngOnInit() {
     this.posts = this.postsServices.getAll()
+
+
   }
 
 

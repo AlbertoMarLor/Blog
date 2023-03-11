@@ -4,10 +4,10 @@ import { ListaPostsComponent } from './components/lista-posts/lista-posts.compon
 
 const routes: Routes = [
 
-  { path: '', pathMatch: 'full', redirectTo: '/posts' },
-  { path: 'posts', component: ListaPostsComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'Blog/posts' },
+  { path: 'Blog/posts', component: ListaPostsComponent },
   /*   { path: 'blog/new', component: FormularioComponent }, */
-  { path: '**', redirectTo: '/posts' }
+  { path: '**', redirectTo: 'Blog/posts' }
 
 ];
 
