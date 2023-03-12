@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+.header {
+    background-color: grey;
+    padding: 20px;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+    position: relative;
+
+}
+
+p {
+    transform: translateX(32.5%);
+    margin-bottom: 30px;
+}
+
+button.blog {
+    position: absolute;
+    top: 90px;
+}
