@@ -14,7 +14,7 @@ export class PostsService {
     this.posts = [
       {
         titulo: 'Bienvenida',
-        texto: 'Bienvenid@ al Blog',
+        texto: 'Bienvenid@ al Blog!',
         autor: 'Alberto',
         imagen: 'https://www.adgully.com/img/800/51481_holii.jpg',
         fecha: '11/03/2023',
@@ -44,12 +44,14 @@ export class PostsService {
 
 
   getAll() {
+    this.posts = JSON.parse(localStorage.getItem('Posts')!)
     return this.posts
   }
 
 
   create(Post: Post) {
     this.posts.push(Post)
+    localStorage.setItem('Posts', JSON.stringify(this.posts))
   }
 
 
