@@ -19,7 +19,7 @@ export class FormularioComponent {
       titulo: new FormControl(null, [
         Validators.required
       ]),
-      categoria: new FormControl(null, [
+      categoria: new FormControl('', [
         Validators.required
       ]),
       autor: new FormControl(null, [
@@ -43,6 +43,12 @@ export class FormularioComponent {
     this.postsService.create(this.formulario.value);
 
     this.router.navigate(['/Blog/posts']);
+  }
+
+
+  checkError(control: string, validator: string) {
+    return this.formulario.get(control)?.hasError(validator) && this.formulario.get(control)?.touched
+
   }
 
 

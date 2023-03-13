@@ -14,8 +14,7 @@
         <img [src]="post.imagen">
         <p class="text-success">{{(post.categoria.toUpperCase())}}</p>
         <p>{{post.texto}}</p>
-        <p></p>
-        <p class="text-muted">{{post.autor}} - {{post.fecha}}</p>
+        <p class="text-muted">{{post.autor}} - {{post.fecha | date}}</p>
 
 
     </div>
