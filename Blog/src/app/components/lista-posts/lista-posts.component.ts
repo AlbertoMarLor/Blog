@@ -20,6 +20,7 @@ export class ListaPostsComponent {
 
   ngOnInit() {
     this.posts = this.postsServices.getAll()
+    localStorage.setItem('Post', JSON.stringify(this.posts));
 
 
   }
